@@ -7,7 +7,7 @@ const directions = {
 };
 export default {
   name: 'Grid',
-  render(h) {
+  render (h) {
     // Grid cell renderer
     const getCell = ({ nodes, position, row, column }) => {
       // Get the default slot first
@@ -101,20 +101,20 @@ export default {
     },
   },
   computed: {
-    containerStyle() {
+    containerStyle () {
       return {
         gridTemplateColumns: this.gridTemplateColumns,
         gridGap: this.gap,
       };
     },
-    gridTemplateColumns() {
+    gridTemplateColumns () {
       return `repeat(${this.autofit ? 'auto-fit' : this.columns}, ${
         this.columnWidth
-      })`;
+        })`;
     },
   },
   methods: {
-    handleCellKeydown({ row, column, event }) {
+    handleCellKeydown ({ row, column, event }) {
       // Return if focus management is disabled
       if (this.disableFocus) return;
       const state = {
@@ -195,7 +195,7 @@ export default {
       event.stopPropagation();
       event.preventDefault();
     },
-    tryFocus(el = this.$el) {
+    tryFocus (el = this.$el) {
       this.$nextTick(() => {
         const selectors = [
           '.vc-grid-focus',
@@ -221,6 +221,7 @@ export default {
   position: relative;
   flex-shrink: 1;
   display: grid;
+  display: -ms-grid;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
 }

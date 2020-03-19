@@ -63,6 +63,7 @@
     "babel-core": "^7.0.0-0",
     "babel-eslint": "^10.0.3",
     "babel-jest": "^22.0.4",
+    "postcss-custom-properties": "^9.1.1",
     "postcss-preset-env": "^6.6.0",
     "tailwindcss": "1.1.4",
     "vuepress": "1.2.0"
@@ -72,7 +73,7 @@
   },
   "browserslist": [
     ">1%",
-    "not ie 11",
+    "ie 11",
     "not op_mini all"
   ]
 }
