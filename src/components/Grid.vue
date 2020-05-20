@@ -221,7 +221,6 @@ export default {
   position: relative;
   flex-shrink: 1;
   display: grid;
-  display: -ms-grid;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
 }
